@@ -7,10 +7,10 @@ Minimalist .NET framework for running *Selenium WebDriver* tests using NUnit + e
 - Automatic driver management (via ~~WebDriverManager~~ Selenium Manager)
 - Cross-browser support
 - Parallel test execution
-- Screenshot on test failure
+- Screenshot on a test failure
 - Configuration using a `.runsettings` file
-- Suitable for CI/CD (e.g. with [Jenkins](https://www.jenkins.io/))
-- Debugging support class, that enables to highligh a web element or show a notification
+- Suitable for a CI/CD (e.g. with [Jenkins](https://www.jenkins.io/))
+- Debugging support class that allows to highlight a web element or show a notification
 - Easily extendable
 
 ## NuGet dependencies:
