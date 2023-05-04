@@ -6,4 +6,3 @@ public static class TimeoutHelper
     public const int MidTimeout = 10;
     public const int LongTimeout = 30;
 }
-

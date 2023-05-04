@@ -47,4 +47,3 @@ public static class WaitHelper
         return new WebDriverWait(driver, TimeSpan.FromSeconds(sec)).Until((d) => File.Exists(path));
     }
 }
-

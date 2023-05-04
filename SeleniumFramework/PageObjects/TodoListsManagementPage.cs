@@ -6,6 +6,7 @@ namespace SeleniumFramework.PageObjects;
 public class TodoListsManagementPage : BasePage
 {
     private By NewTodoListInputBy = By.ClassName("new-todo-list");
+    private By H1By = By.TagName("h1");
 
     private class TodoListsTableRowFragment
     {
@@ -64,5 +65,11 @@ public class TodoListsManagementPage : BasePage
     {
         var tableRowFragment = new TodoListsTableRowFragment(Driver, todoListName);
         tableRowFragment.ClickUseButton();
+    }
+    
+    public string H1BackgroundColor()
+    {
+        var h1 = WaitHelper.WaitForVisible(Driver, H1By, TimeoutHelper.MidTimeout);
+        return h1.GetCssValue("background-color");
     }
 }

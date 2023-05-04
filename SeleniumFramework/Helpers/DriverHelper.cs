@@ -2,8 +2,6 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using SeleniumFramework.Enums;
-using WebDriverManager;
-using WebDriverManager.DriverConfigs.Impl;
 
 namespace SeleniumFramework.Helpers;
 
@@ -24,7 +22,6 @@ public static class DriverHelper
 
     private static ChromeDriver SetupChromeDriver()
     {
-        new DriverManager().SetUpDriver(new ChromeConfig());
         ChromeOptions options = new();
         options.AddAdditionalOption(CapabilityType.AcceptInsecureCertificates, true);
         if (SetupHelper.RunInHeadlessMode)
@@ -44,7 +41,6 @@ public static class DriverHelper
 
     private static FirefoxDriver SetupFirefoxDriver()
     {
-        new DriverManager().SetUpDriver(new FirefoxConfig());
         FirefoxOptions options = new();
         options.AddAdditionalOption(CapabilityType.AcceptInsecureCertificates, true);
         if (SetupHelper.RunInHeadlessMode)
@@ -62,4 +58,3 @@ public static class DriverHelper
         return driver;
     }
 }
-

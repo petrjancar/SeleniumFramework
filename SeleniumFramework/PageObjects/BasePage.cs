@@ -22,4 +22,3 @@ public abstract class BasePage
         Driver.Navigate().GoToUrl(Url);
     }      
 }
-
